@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename= 'js/script.js') }}"></script>
+
+<h2>Signup</h2>
+{% if message %}<p class=error><strong>Message:</strong> {{ message }}{% endif %}
+<form action="{{ url_for('signup') }}" method="post">
+  <dl>
+    <dt>Email:</dt>
+    <dd><input type=text name="email">
+      <span style='display:none'> email is wrong </span>
+      <span id="check_email" style='display:none'>email is same</span> 
+      <dt>Password:</dt>
+      <dd><input type="password" name="pw"></dd>
+      <span style='display:none'> password is wrong </span>
+      <dt>Password_check:</dt>
+      <dd><input type="password" name="pw_check"></dd>
+      <span style='display:none'> password is not not same </span>
+      
+      <dd>admin<dd>
+        <dd><input type="checkbox" name="admin" value="True">
+        </dl>
+        <dd><input type="submit" value="signup"></dd>
+      </form>
+      {% endblock %}
+
