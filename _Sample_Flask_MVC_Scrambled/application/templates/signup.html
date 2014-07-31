@@ -1,8 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="{{ url_for('static', filename= 'js/script.js') }}"></script>
-
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <h2>Signup</h2>
 {% if message %}<p class=error><strong>Message:</strong> {{ message }}{% endif %}
 <form action="{{ url_for('signup') }}" method="post">
