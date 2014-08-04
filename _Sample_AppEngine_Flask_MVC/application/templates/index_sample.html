@@ -1,0 +1,14 @@
+{% extends "layout_sample.html" %}
+{% block body_container %}
+<div class="container">
+  <div class="table">
+    <div class="row">
+      {% for entry in entries %}
+      <div class="entry col-md-2">
+        <a href='{{entry.url}}'> {{entry['name']}} </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
