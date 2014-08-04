@@ -11,7 +11,7 @@ handlers:
 #   upload: application/static/res/img/favicon.ico
 
 # [application/static/*] => [project-id.appspot.com/static/*]
-- url: static
+- url: /static
   static_dir: application/static
 
 # application[directory name] : module name
