@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+{{ super() }}
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/summernote.css') }}">
+<script src="{{ url_for('static',filename='js/summernote.min.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static',filename='css/timeline.css') }}">
+<script src="{{ url_for('static',filename='js/timeline.js') }}"></script>
+{% endblock %}
+
+{% block nav_timeline_class %}active{% endblock %}
+
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form class="panel panel-default">
+
+
+                <textarea class="panel-body" name="body" id="summernote" cols="30" rows="10"></textarea>
+                <div class="panel-footer">
+                    <button class="btn btn-primary pull-right">Submit</button>
+                </div>
+            </form>
+
+
+            <div class="panel panel-default">
+
+
+                <div class="panel-body">
+                    <h3 class="panel-title">노승은</h3>
+                    <span class="small">2014-08-06 18:07:05</span>
+                    <hr>
+                    나는 바보다 하하하하하하하
+                </div>
+                <div class="panel-footer">
+
+                    <a href="#" data-toggle="modal" data-target="#modal-comment"><span class="label label-default pull-right"><span class="glyphicon glyphicon-comment"></span>&nbsp;5</span></a>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="modal-comment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Comments</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-addon">홍지호</span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">등록</button>
+                        </span>
+                    </div><!-- /input-group -->
+                    <hr>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Alex</a> hi</li>
+                        <li class="list-group-item"><a href="#">홍지호</a> 수고가 많다</li>
+                        <li class="list-group-item"><a href="#">박준호</a> ㅋㅋㅋㅋㅋㅋㅋ</li>
+                        <li class="list-group-item"><a href="#">냄디</a> ㅡㅡ</li>
+                    </ul>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+
+{% endblock %}

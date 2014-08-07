@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+{{ super() }}
+
+
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="active"><a href="#sign-in" role="tab" data-toggle="tab">Sign In</a></li>
+              <li><a href="#sign-up" role="tab" data-toggle="tab">Sign Up</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+              <div class="tab-pane fade in active" id="sign-in">
+                <div class="">
+                    <div class="panel-body">
+                      <form role="form" >
+                          <div class="form-group">
+                            <label for="email-sign-in">Email address</label>
+                            <input type="email" class="form-control" id="email-sign-in" name="email" placeholder="Enter email" autofocus required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password-sign-in">Password</label>
+                            <input type="password" class="form-control" id="password-sign-in" name="password" placeholder="Password" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="sign-up">
+            <div class="">
+                <div class="panel-body">
+                  <form role="form" >
+                      <div class="form-group">
+                        <label for="email-sign-up">Email address</label>
+                        <input type="email" class="form-control" id="email-sign-up" name="email" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-sign-up">Password</label>
+                        <input type="password" class="form-control" id="password-sign-up" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password-sign-up">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password-sign-up" name="confirm-password" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username-sign-up">Username</label>
+                        <input type="text" class="form-control" id="username-sign-up" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-sign-up">Phone</label>
+                        <input type="text" class="form-control" id="phone-sign-up" name="mobile" placeholder="Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="radio-inline">
+                            <input type="radio" name="gender"  value="F" checked> Female
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="gender"  value="M"> Male
+                      </label>
+                  </div>
+                  <div class="form-group">
+                      <label for="birthday">Birthday</label>
+                      <input type="date" class="form-control" id="birthday" name="birthday"  required>
+                  </div>
+
+
+                  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+
+</div>
+</div>
+
+</div>
+{% endblock %}
