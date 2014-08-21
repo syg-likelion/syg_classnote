@@ -1,0 +1,12 @@
+{
+	"cmd" : [
+		"python", 
+		
+		"C:\\Program Files (x86)\\Google\\google_appengine\\appcfg.py",		// appcfg.py FULL PATH
+		"--oauth2",
+		"update",
+		"C:\\Users\\pjhjohn\\Desktop\\test-gae-projects\\test-gallery"		// YOUR PROJECT PATH
+	],
+	"encoding" : "cp949",
+	"shell" : true
+}
